@@ -1,4 +1,4 @@
-# 🔎 Port Scanner in Python
+# 🔎 Port Scanner
 
 A lightweight and multithreaded TCP port scanner built with Python for network reconnaissance and security testing in authorized environments.
 
@@ -58,35 +58,33 @@ Show total scan time
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/NEXUSSCAN.git
+git clone https://github.com/utsavthakur448/Port-Scanner.git
 ```
 
 Move into the project directory:
 
 ```bash
-cd NEXUSSCAN
+cd Port-Scanner
 ```
 
 ---
 
 ## ▶️ Usage
 
-### Scan a port range
-
 ```bash
-python3 scan.py -t 127.0.0.1 -sp 1 -ep 100
+python3 port_scanner.py -h
 ```
 
 ### Scan a domain
 
 ```bash
-python3 scan.py -t <ip> -sp 1 -ep 1000
+python3 port_scanner.py -t <ip> -sp 1 -ep 1000
 ```
 
 ### Command format
 
 ```bash
-python3 scan.py -t TARGET -sp START_PORT -ep END_PORT
+python3 port_scanner.py -t TARGET -sp START_PORT -ep END_PORT
 ```
 
 | Argument               | Description                   |
@@ -138,7 +136,7 @@ The project can be tested safely against:
 For example, when using a private lab network:
 
 ```bash
-python3 scan.py -t 192.168.56.101 -sp 1 -ep 1000
+python3 port_scanner.py -t 192.168.56.101 -sp 1 -ep 1000
 ```
 
 ---
@@ -180,5 +178,3 @@ Possible future versions may include:
 **Utsav Thakur**
 
 Cybersecurity Enthusiast | Ethical Hacking | VAPT | Penetration Testing
-
----
