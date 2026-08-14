@@ -1,4 +1,4 @@
-# Port Scanner in Python 🔎
+# 🔎 Port Scanner in Python
 
 A lightweight and multithreaded TCP port scanner built with Python for network reconnaissance and security testing in authorized environments.
 
@@ -70,12 +70,6 @@ Move into the project directory:
 cd NEXUSSCAN
 ```
 
-Check that Python 3 is installed:
-
-```bash
-python3 --version
-```
-
 ---
 
 ## ▶️ Usage
@@ -89,7 +83,7 @@ python3 scan.py -t 127.0.0.1 -sp 1 -ep 100
 ### Scan a domain
 
 ```bash
-python3 scan.py -t example.com -sp 1 -ep 1000
+python3 scan.py -t <ip> -sp 1 -ep 1000
 ```
 
 ### Command format
@@ -135,30 +129,6 @@ Time taken: 5.39 seconds
 
 ---
 
-## 🔍 Service Detection
-
-When an open port is discovered, NEXUSSCAN attempts to identify the standard service associated with that TCP port.
-
-For example:
-
-```text
-22    → SSH
-80    → HTTP
-443   → HTTPS
-3306  → MYSQL
-3389  → RDP
-```
-
-For ports without a known standard service mapping, the scanner reports:
-
-```text
-UNKNOWN
-```
-
-This feature identifies the service associated with the **standard port number**; it does not perform deep software or version fingerprinting.
-
----
-
 ## ⚡ Multithreading
 
 NEXUSSCAN uses Python's `threading` module to scan multiple ports concurrently rather than scanning every port sequentially.
@@ -168,22 +138,6 @@ This makes the scanner significantly more practical when scanning a larger port 
 The scanner also waits for all scanning threads to complete before displaying the final scan time.
 
 ---
-
-## 🎨 Terminal Output
-
-The terminal output uses ANSI color codes to make important information easier to identify:
-
-* 🟢 **Green** — Open ports
-* 🔵 **Cyan** — Scanner information and headings
-
-Example:
-
-```text
-[OPEN] 22    SSH
-[OPEN] 80    HTTP
-[OPEN] 443   HTTPS
-```
-
 ---
 
 ## 🧪 Testing Environment
@@ -243,15 +197,3 @@ Possible future versions may include:
 Cybersecurity Enthusiast | Ethical Hacking | VAPT | Penetration Testing
 
 ---
-
-## ⚠️ Legal & Ethical Notice
-
-NEXUSSCAN should only be used against systems that you own or have explicit authorization to test.
-
-Unauthorized port scanning can violate organizational policies, terms of service, or applicable laws. The author is not responsible for misuse of this tool.
-
----
-
-## ⭐ Support
-
-If you find this project useful for learning about network security and Python socket programming, consider giving the repository a ⭐ on GitHub.
