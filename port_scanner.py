@@ -43,12 +43,12 @@ end_port = int(args.end_port)
 try:
     target_ip = socket.gethostbyname(target)
 except socket.gaierror:
-    print(RED + "\t[-] Unable to resolve host." + RESET)
+    print(RED + "[-] Unable to resolve host." + RESET)
     exit()
 
-print(CYAN + "\t[!] Starting scan on host: " + target + RESET)
+print(CYAN + "[!] Starting scan on host: " + target + RESET)
 print()
-print("\tPORT    STATE        SERVICE")
+print("PORT    STATE        SERVICE")
 print("-" * 60)
 
 open_ports = []
@@ -66,7 +66,7 @@ def scan_port(port):
             
         open_ports.append(port)
 
-        print("\t{:<8}{:<15}{}".format(port, "open", service) + RESET)
+        print("{:<8}{:<15}{}".format(port, "open", service) + RESET)
     s.close()
 
 threads = []
@@ -82,4 +82,4 @@ for thread in threads:
 if len(open_ports) == 0:
     print(RED + "No open ports found." + RESET)
 print()
-print("\tTime elapsed: {:.2f} seconds".format(time.time() - startTime))
+print("Time elapsed: {:.2f} seconds".format(time.time() - startTime))
