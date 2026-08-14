@@ -80,6 +80,6 @@ for i in range(start_port, end_port + 1):
 for thread in threads:
     thread.join()
 if len(open_ports) == 0:
-    print(RED + "No open ports found.")
+    print(RED + "No open ports found." + RESET)
 print()
-print("Time elapsed: {:.2f} seconds".format(time.time() - startTime) + RESET)
+print("Time elapsed: {:.2f} seconds".format(time.time() - startTime))
