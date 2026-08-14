@@ -51,9 +51,6 @@ Display open port + service
         ↓
 Show total scan time
 ```
-
-The scanner uses TCP `connect_ex()` to determine whether a connection can be established to a specific port.
-
 ---
 
 ## 💻 Installation
@@ -126,18 +123,6 @@ No open ports found.
 
 Time taken: 5.39 seconds
 ```
-
----
-
-## ⚡ Multithreading
-
-NEXUSSCAN uses Python's `threading` module to scan multiple ports concurrently rather than scanning every port sequentially.
-
-This makes the scanner significantly more practical when scanning a larger port range.
-
-The scanner also waits for all scanning threads to complete before displaying the final scan time.
-
----
 ---
 
 ## 🧪 Testing Environment
