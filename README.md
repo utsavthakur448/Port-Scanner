@@ -95,34 +95,6 @@ python3 port_scanner.py -t TARGET -sp START_PORT -ep END_PORT
 
 ---
 
-## 📌 Example Output
-
-```text
-Starting scan on host: 192.168.56.101
-
-PORT    STATE        SERVICE
------------------------------------------------------
-22      open         SSH
-80      open         HTTP
-443     open         HTTPS
-
-Time taken: 1.42 seconds
-```
-
-When no open ports are found:
-
-```text
-Starting scan on host: 192.168.56.101
-
-PORT    STATE        SERVICE
------------------------------------------------------
-
-No open ports found.
-
-Time taken: 5.39 seconds
-```
----
-
 ## 🧪 Testing Environment
 
 The project can be tested safely against:
@@ -138,6 +110,13 @@ For example, when using a private lab network:
 ```bash
 python3 port_scanner.py -t 192.168.56.101 -sp 1 -ep 1000
 ```
+---
+
+## 📌 Output ScreenShot
+
+<img width="1485" height="736" alt="Screenshot_2026-08-16_01_46_55" src="https://github.com/user-attachments/assets/4afdf3f9-6c5a-4790-966a-75ee8e43f4e8" />
+
+<img width="1445" height="662" alt="Screenshot_2026-08-16_01_45_35" src="https://github.com/user-attachments/assets/c635c687-d01b-45dd-b6be-73c6085bb14d" />
 
 ---
 
