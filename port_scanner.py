@@ -52,7 +52,6 @@ print("PORT    STATE        SERVICE")
 print("-" * 60)
 
 open_ports = []
-
 def scan_port(port):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(5)
@@ -70,15 +69,14 @@ def scan_port(port):
     s.close()
 
 threads = []
-
 for i in range(start_port, end_port + 1):
     thread = threading.Thread(target = scan_port, args=(i,))
     thread.start()
     threads.append(thread)
-
 # Wait for all threads to finish
 for thread in threads:
     thread.join()
+ 
 if len(open_ports) == 0:
     print(RED + "No open ports found." + RESET)
 print()
